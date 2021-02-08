@@ -24,7 +24,7 @@
 #ifndef MEM_MODEL_H_
 #define MEM_MODEL_H_
 
-#define JSON_MAX_KEYS 10
+#define JSON_MAX_KEYS 60
 
 typedef struct jsonNode {
     char *key;

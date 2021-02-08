@@ -34,7 +34,7 @@ jsonDecoderStatus_t JSON_DECODER_getRoot(jsonNode_t **pNode)
     return JSON_DECODER_OK;
 }
 
-jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, char *key, jsonNode_t **pNode)
+jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, const char *key, jsonNode_t **pNode)
 {
     do
     {
@@ -53,7 +53,7 @@ jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, char *key, jsonN
     return JSON_DECODER_KEY_NOT_FOUND;
 }
 
-jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, char *key, uint8_t size, char *pVal)
+jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, const char *key, uint8_t size, char *pVal)
 {
     do
     {
@@ -68,7 +68,7 @@ jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, char *key, uint8
     return JSON_DECODER_KEY_NOT_FOUND;
 }
 
-jsonDecoderStatus_t JSON_DECODER_getNumber(jsonNode_t *current, char *key, int *pVal)
+jsonDecoderStatus_t JSON_DECODER_getNumber(jsonNode_t *current, const char *key, int *pVal)
 {
     do
     {

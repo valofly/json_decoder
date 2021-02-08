@@ -70,7 +70,7 @@ jsonDecoderStatus_t JSON_DECODER_getRoot(jsonNode_t **pNode);
  * \retval JSON_DECODER_OK Object was found and pNode now points to in.
  * \retval JSON_DECODER_KEY_NOT_FOUND The specified key does not exist.
  */
-jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, char *key, jsonNode_t **pNode);
+jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, const char *key, jsonNode_t **pNode);
 
 /**
  * \brief Finds a string by key in a JOSN object.
@@ -86,7 +86,7 @@ jsonDecoderStatus_t JSON_DECODER_getObject(jsonNode_t *current, char *key, jsonN
  * \retval JSON_DECODER_OK String was found and pVal now points to in.
  * \retval JSON_DECODER_KEY_NOT_FOUND The specified key does not exist.
  */
-jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, char *key, uint8_t size, char *pVal);
+jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, const char *key, uint8_t size, char *pVal);
 
 /**
  * \brief Finds a number by key in a JSON object.
@@ -101,6 +101,6 @@ jsonDecoderStatus_t JSON_DECODER_getString(jsonNode_t *current, char *key, uint8
  * \retval JSON_DECODER_OK Number was found and pVal now points to in.
  * \retval JSON_DECODER_KEY_NOT_FOUND The specified key does not exist.
  */
-jsonDecoderStatus_t JSON_DECODER_getNumber(jsonNode_t *current, char *key, int *pVal);
+jsonDecoderStatus_t JSON_DECODER_getNumber(jsonNode_t *current, const char *key, int *pVal);
 
 #endif /* JSON_DECODER_H_ */
